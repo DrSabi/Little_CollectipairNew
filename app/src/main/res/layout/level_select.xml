@@ -14,8 +14,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="120dp"
+        android:layout_marginStart="50pt"
+        android:layout_marginTop="40pt"
         app:srcCompat="@drawable/level1" />
 
     <ImageButton
@@ -24,8 +24,9 @@
         android:layout_height="92dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginTop="238dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50pt"
+        android:layout_marginTop="110pt"
         app:srcCompat="@drawable/level2dukek" />
 
     <ImageButton
@@ -33,9 +34,10 @@
         android:layout_width="200dp"
         android:layout_height="92dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginBottom="280dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="50pt"
+        android:layout_marginTop="190pt"
         app:srcCompat="@drawable/level3xd" />
 
     <ImageButton
@@ -43,11 +45,9 @@
         android:layout_width="200dp"
         android:layout_height="92dp"
         android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="110dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="120dp"
+        android:layout_marginStart="50pt"
+        android:layout_marginTop="260pt"
         app:srcCompat="@drawable/zuruecknachhinteninseckdesbjoerns" />
 </RelativeLayout>
