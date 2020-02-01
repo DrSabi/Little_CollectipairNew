@@ -1,0 +1,68 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.google.ar.sceneform.plugin'
+
+android {
+    compileSdkVersion 29
+    buildToolsVersion "29.0.3"
+    defaultConfig {
+        applicationId "com.project.little_collectipair"
+        minSdkVersion 24
+        targetSdkVersion 29
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    dependencies {
+        implementation fileTree(dir: 'libs', include: ['*.jar'])
+        implementation 'androidx.appcompat:appcompat:1.0.2'
+        implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+        testImplementation 'junit:junit:4.12'
+        androidTestImplementation 'androidx.test.ext:junit:1.1.0'
+        androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.1'
+        // Provides ARCore Session and related resources.
+        implementation 'com.google.ar:core:1.14.0'
+
+        // Provides ArFragment, and other UX resources.
+        implementation 'com.google.ar.sceneform.ux:sceneform-ux:1.14.0'
+
+        // Alternatively, use ArSceneView without the UX dependency.
+        implementation 'com.google.ar.sceneform:core:1.14.0'
+    }
+}
+
+
+sceneform.asset('src/sampledata/andy.obj',
+        'default',
+        'src/sampledata/andy.sfa',
+        'src/main/res/raw/andy')
+
+sceneform.asset('src/sampledata/Reifen.fbx',
+        'default',
+        'src/sampledata/Reifen.sfa',
+        'src/main/assets/Reifen')
+
+sceneform.asset('src/sampledata/reifen.fbx',
+        'default',
+        'src/sampledata/reifen.sfa',
+        'src/main/res/raw/reifen')
+
+sceneform.asset('src/sampledata/autokarosse.fbx',
+        'default',
+        'src/sampledata/autokarosse.sfa',
+        'src/main/res/raw/autokarosse')
+
+sceneform.asset('src/sampledata/autogesamt.fbx',
+        'default',
+        'src/sampledata/autogesamt.sfa',
+        'src/main/res/raw/autogesamt')
