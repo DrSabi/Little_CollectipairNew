@@ -32,7 +32,7 @@ import com.google.ar.sceneform.ux.TransformableNode;
 import android.os.Build.VERSION_CODES;
 import androidx.fragment.app.FragmentActivity;
 
-//TEST
+//TEST Denny ist ein plöder pursche und iich haue ihn gleich zu poden
 public class MainActivity extends AppCompatActivity {
 
     private static final String TAG = MainActivity.class.getSimpleName();
