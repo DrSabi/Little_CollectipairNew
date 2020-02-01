@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.view.View;
 
 public class Level_Select extends AppCompatActivity {
-    private Button b_lvl_1;
-    private Button b_lvl_2;
-    private Button b_lvl_3;
-    private Button b_back;
+    private ImageButton b_lvl_1;
+    private ImageButton b_lvl_2;
+    private ImageButton b_lvl_3;
+    private ImageButton b_back;
 
 
     @Override
@@ -21,11 +21,11 @@ public class Level_Select extends AppCompatActivity {
 
         setContentView(R.layout.level_select);
 
-        b_lvl_1 = (Button) findViewById(R.id.b_lvl1);
-        b_lvl_2 = (Button) findViewById(R.id.b_lvl2);
-        b_lvl_3 = (Button) findViewById(R.id.b_lvl3);
+        b_lvl_1 = (ImageButton) findViewById(R.id.b_lvl1);
+        b_lvl_2 = (ImageButton) findViewById(R.id.b_lvl2);
+        b_lvl_3 = (ImageButton) findViewById(R.id.b_lvl3);
 
-        b_back = (Button) findViewById(R.id.b_back);
+        b_back = (ImageButton) findViewById(R.id.b_back);
 
 
         View.OnClickListener myhandler1 = new View.OnClickListener() {
@@ -64,15 +64,13 @@ public class Level_Select extends AppCompatActivity {
     }
 
     private void secondLvlClicked() {
-        b_lvl_2.setText("AWESOME!");
+
     }
 
     private void thirdLvlClicked() {
-        b_lvl_3.setText("AWESOME!");
     }
 
     private void backButtonClicked() {
-        b_back.setText("AWESOME!");
     }
 
 }

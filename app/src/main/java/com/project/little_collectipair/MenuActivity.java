@@ -5,13 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 
-import android.widget.Button;
+import android.widget.ImageButton;
 import android.view.View;
 
 public class MenuActivity extends AppCompatActivity {
 
-    private Button nextButton;
-    private Button closeButton;
+    private ImageButton nextButton;
+    private ImageButton closeButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,8 +19,8 @@ public class MenuActivity extends AppCompatActivity {
 
         setContentView(R.layout.menu);
 
-        nextButton = (Button) findViewById(R.id.b1);
-        closeButton = (Button) findViewById(R.id.b2);
+        nextButton = (ImageButton) findViewById(R.id.b1);
+        closeButton = (ImageButton) findViewById(R.id.b2);
         View.OnClickListener myhandler1 = new View.OnClickListener() {
             public void onClick(View v) {
                 nextButtonClicked();
