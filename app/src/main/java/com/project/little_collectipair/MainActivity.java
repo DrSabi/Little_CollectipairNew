@@ -14,6 +14,7 @@ import android.view.Display;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Random;
 
@@ -96,6 +97,18 @@ public class MainActivity extends AppCompatActivity {
 
         }
 
+    }
+
+    private void startTimer() {
+
+        TextView timer = findViewById(R.id.Fehler);
+        new Thread(() -> {
+            int seconds = 0;
+            int minutesPassed = seconds / 60;
+            int secondsPassed = seconds % 60;
+            runOnUiThread(() -> timer.setText("Denny")
+            );
+        }).start();
     }
 
     private void makeCube(Anchor anchor) {
