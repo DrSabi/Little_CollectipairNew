@@ -14,6 +14,7 @@ import android.view.Display;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Random;
@@ -159,6 +160,12 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
                 });
     }
 
@@ -179,6 +186,16 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
+
+
+
+
                 });
     }
 
@@ -196,6 +213,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
+
                 });
     }
 
@@ -213,6 +237,25 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
+
                 });
+    }
+
+    private void deleteObject(AnchorNode anchorNode) {
+
+        anchorNode.setParent(null);
+        isModelPlaced = false;
+        try{
+            wait(3000);
+        }
+        catch(Exception e) {}
+        
+
     }
 }
