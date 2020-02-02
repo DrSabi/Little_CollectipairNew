@@ -9,31 +9,23 @@
 
     <ImageButton
         android:id="@+id/b1"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
+        android:layout_width="200dp"
+        android:layout_height="92dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="115dp"
-        android:layout_marginTop="163dp"
-        android:layout_marginEnd="126dp"
-        android:accessibilityLiveRegion="assertive"
-        android:background="@null"
-        android:baselineAligned="false"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/play" />
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="289dp"
+        app:srcCompat="@drawable/playbutton" />
 
     <ImageButton
         android:id="@+id/b2"
-        android:layout_width="128dp"
-        android:layout_height="128dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
+        android:layout_width="200dp"
+        android:layout_height="92dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginEnd="131dp"
-        android:layout_marginBottom="75dp"
-        android:background="@null"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/exit" />
+        android:layout_marginStart="95dp"
+        android:layout_marginTop="449dp"
+        app:srcCompat="@drawable/exitbutton" />
 </RelativeLayout>
