@@ -20,7 +20,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:layout_centerHorizontal="true"
-        android:text="0:0"
+        android:text="Denny"
         android:textSize="32sp"
         android:textStyle="bold"
         android:fontFamily="serif-monospace"
