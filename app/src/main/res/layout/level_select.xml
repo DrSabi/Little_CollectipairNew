@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/hintergrund"
+    android:background="@drawable/background"
     android:orientation="vertical">
 
 
@@ -14,20 +14,22 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="115sp"
-        android:layout_marginTop="50sp"
-        app:srcCompat="@drawable/level1" />
+        android:layout_marginStart="107dp"
+        android:layout_marginTop="179dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/lvl1" />
 
     <ImageButton
         android:id="@+id/b_lvl2"
-        android:layout_width="200dp"
-        android:layout_height="92dp"
+        android:layout_width="199dp"
+        android:layout_height="104dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="106dp"
-        android:layout_marginTop="229dp"
-        app:srcCompat="@drawable/level2dukek" />
+        android:layout_marginStart="111dp"
+        android:layout_marginTop="340dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/lvl2" />
 
     <ImageButton
         android:id="@+id/b_lvl3"
@@ -36,18 +38,25 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="50pt"
-        android:layout_marginTop="190pt"
-        app:srcCompat="@drawable/level3xd" />
+        android:layout_marginStart="118dp"
+        android:layout_marginTop="505dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/lvl3" />
 
     <ImageButton
         android:id="@+id/b_back"
-        android:layout_width="200dp"
-        android:layout_height="92dp"
+        android:layout_width="127dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="50pt"
-        android:layout_marginTop="260pt"
+        android:layout_marginStart="283dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="638dp"
+        android:background="@null"
+        android:scaleType="fitXY"
         app:srcCompat="@drawable/zuruecknachhinteninseckdesbjoerns" />
 </RelativeLayout>
