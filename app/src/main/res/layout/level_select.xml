@@ -17,6 +17,7 @@
         android:layout_marginStart="105dp"
         android:layout_marginTop="147dp"
         android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/lvl1" />
 
     <ImageButton
@@ -29,6 +30,7 @@
         android:layout_marginStart="105dp"
         android:layout_marginTop="253dp"
         android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/lvl2" />
 
     <ImageButton
@@ -41,6 +43,7 @@
         android:layout_marginStart="104dp"
         android:layout_marginTop="369dp"
         android:scaleType="fitXY"
+        android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/lvl3" />
 
     <ImageButton
@@ -52,5 +55,6 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="105dp"
         android:layout_marginTop="523dp"
+        android:layout_gravity="center_horizontal"
         app:srcCompat="@drawable/zuruecknachhinteninseckdesbjoerns" />
 </RelativeLayout>
