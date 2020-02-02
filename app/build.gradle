@@ -47,11 +47,6 @@ sceneform.asset('src/sampledata/andy.obj',
         'src/sampledata/andy.sfa',
         'src/main/res/raw/andy')
 
-sceneform.asset('src/sampledata/Reifen.fbx',
-        'default',
-        'src/sampledata/Reifen.sfa',
-        'src/main/assets/Reifen')
-
 sceneform.asset('src/sampledata/reifen.fbx',
         'default',
         'src/sampledata/reifen.sfa',

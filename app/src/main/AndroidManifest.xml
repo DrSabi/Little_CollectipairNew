@@ -26,15 +26,9 @@
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
     </activity>
-        <activity android:name=".MainActivity">
-        </activity>
-        <activity android:name=".Level_Select"
-            android:parentActivityName=".MainActivity">
-            <!-- The meta-data tag is required if you support API level 15 and lower -->
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".MainActivity" />
-        </activity>
+        <activity android:name=".MainActivity"/>
+        <activity android:name=".Level_Select"/>
+
         <!-- Indicates that app requires ARCore ("AR Required"). Causes the Google
          Play Store to download and install Google Play Services for AR along
          with the app. For an "AR Optional" app, specify "optional" instead of
