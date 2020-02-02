@@ -38,7 +38,7 @@
         android:textSize="32sp"
         android:layout_marginBottom="8dp"
         android:foregroundTint="#9500FF"
-        android:text="[null pointer exception]" />
+        android:text="0/0" />
 
     <Button
         android:id="@+id/einsammeln"
