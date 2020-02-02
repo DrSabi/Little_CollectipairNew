@@ -142,7 +142,7 @@ public class MainActivity extends AppCompatActivity {
                 RenderableModel_LVL2(anchor);
                 break;
             case 3:
-                items_sum =8;
+                items_sum =7;
                 RenderableModel_LVL3(anchor);
                 break;
             case 99:
