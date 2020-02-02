@@ -59,6 +59,7 @@ public class MainActivity extends AppCompatActivity {
     private int star_count;
     private boolean shouldStartTimer = true;
     private int itemsLeft = 5;
+    private int items_sum;
 
 
     @Override
@@ -131,15 +132,19 @@ public class MainActivity extends AppCompatActivity {
 
         switch (level_id) {
             case 1:
+                items_sum = 7;
                 RenderableModel_LVL1(anchor);
                 break;
             case 2:
+                items_sum = 6;
                 RenderableModel_LVL2(anchor);
                 break;
             case 3:
+                items_sum =8;
                 RenderableModel_LVL3(anchor);
                 break;
             case 99:
+                items_sum = 1;
                 RenderableModel_LVL99(anchor);
                 break;
             default:
@@ -268,7 +273,14 @@ public class MainActivity extends AppCompatActivity {
             wait(3000);
         }
         catch(Exception e) {}
-        
+        deletcounter();
 
+    }
+
+    private void deletcounter() {
+        TextView Ausgabe = findViewById(R.id.itemsCntTxt);
+        new Thread(() -> {
+            runOnUiThread(() -> Ausgabe.setText("Eingesammelte Items "+item_count + "von "+items_sum));
+        }).start();
     }
 }
