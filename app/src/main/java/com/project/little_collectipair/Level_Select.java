@@ -60,14 +60,20 @@ public class Level_Select extends AppCompatActivity {
 
     private void firstLvlClicked() {
         Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("LVL_ID", 1);
         startActivity(intent);
     }
 
     private void secondLvlClicked() {
-
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("LVL_ID", 2);
+        startActivity(intent);
     }
 
     private void thirdLvlClicked() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("LVL_ID", 3);
+        startActivity(intent);
     }
 
     private void backButtonClicked() {
