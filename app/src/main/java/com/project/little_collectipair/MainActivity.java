@@ -273,11 +273,11 @@ public class MainActivity extends AppCompatActivity {
 
         anchorNode.setParent(null);
         isModelPlaced = false;
+        deletcounter();
         try{
             wait(3000);
         }
         catch(Exception e) {}
-        deletcounter();
 
         if(item_count > items_sum){
             Intent intent = new Intent(this, Level_Select.class);
