@@ -56,6 +56,8 @@ public class MainActivity extends AppCompatActivity {
     private boolean karosse;
     private int reifen_count;
     private int star_count;
+    private boolean shouldStartTimer = true;
+    private int itemsLeft = 5;
 
 
     @Override
@@ -69,6 +71,10 @@ public class MainActivity extends AppCompatActivity {
 
         arFragment.getArSceneView().getScene().addOnUpdateListener(this::onUpdate);
 
+        if (shouldStartTimer) {
+            startTimer();
+            shouldStartTimer = false;
+        }
 
     }
 
@@ -98,16 +104,23 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
-
     private void startTimer() {
 
         TextView timer = findViewById(R.id.Fehler);
         new Thread(() -> {
             int seconds = 0;
-            int minutesPassed = seconds / 60;
-            int secondsPassed = seconds % 60;
-            runOnUiThread(() -> timer.setText("Denny")
-            );
+            while (itemsLeft > 0) {
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+                seconds++;
+                int minutesPassed = seconds / 60;
+                int secondsPassed = seconds % 60;
+                runOnUiThread(() -> timer.setText(minutesPassed +":"+ secondsPassed));
+            }
+
         }).start();
     }
 

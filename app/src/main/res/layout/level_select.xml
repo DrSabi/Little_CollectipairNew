@@ -25,8 +25,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="50pt"
-        android:layout_marginTop="110pt"
+        android:layout_marginStart="106dp"
+        android:layout_marginTop="229dp"
         app:srcCompat="@drawable/level2dukek" />
 
     <ImageButton
