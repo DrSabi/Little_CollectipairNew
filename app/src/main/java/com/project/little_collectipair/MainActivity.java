@@ -287,8 +287,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void deletcounter() {
         TextView Ausgabe = findViewById(R.id.itemsCntTxt);
-        new Thread(() -> {
-            runOnUiThread(() -> Ausgabe.setText("Eingesammelte Items "+item_count + "von "+items_sum));
-        }).start();
+        if (item_count <= items_sum) {
+            new Thread(() -> {
+                runOnUiThread(() -> Ausgabe.setText("Eingesammelte Items " + item_count + "von " + items_sum));
+            }).start();
+        }
     }
 }
