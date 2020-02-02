@@ -284,7 +284,7 @@
     file: 'src/sampledata/autokarosse.fbx',
     name: 'autokarosse',
     recenter: 'root',
-    scale: 0.36571399999999998,
+    scale: 0.06571399999999998,
   },
   version: '0.54:2',
 }

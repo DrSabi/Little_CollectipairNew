@@ -146,7 +146,7 @@ public class MainActivity extends AppCompatActivity {
         int i = r.nextInt(rnd_count);
 
         //Temp. stern.sfb dont exist atm
-        i = 0;
+        i = 2;
 
         ModelRenderable.builder()
                 .setSource(this, Uri.parse(sfbfiles[i]))
@@ -164,7 +164,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void RenderableModel_LVL2(Anchor anchor)
     {
-        String[] sfbfiles = {"1", "2", "3", "4", "5"};
+        String[] sfbfiles = {"teddy_armleft.sfb", "teddy_armright.sfb",
+                "teddy_legleft.sfb", "teddy_legright.sfb", "teddy_body.sfb", "teddy_head.sfb"};
 
 
         ModelRenderable.builder()
