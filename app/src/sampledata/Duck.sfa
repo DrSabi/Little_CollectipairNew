@@ -1,10 +1,86 @@
 {
   animations: [
     {
-      path: 'src/sampledata/autokarosse.fbx',
+      path: 'src/sampledata/Duck.fbx',
     },
   ],
   materials: [
+    {
+      name: 'body',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            0.071429000000000006,
+            0,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'peak.001',
+      parameters: [
+        {
+          baseColor: [
+            0.018509999999999999,
+            0.80000000000000004,
+            0.001717,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
     {
       name: 'unnamed material',
       parameters: [
@@ -44,12 +120,12 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Fensterscheibe',
+      name: 'Material',
       parameters: [
         {
           baseColor: [
-            0.80000000000000004,
-            0.80000000000000004,
+            0.0057790000000000003,
+            0.078494999999999995,
             0.80000000000000004,
             1,
           ],
@@ -82,13 +158,13 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Auto',
+      name: 'beak',
       parameters: [
         {
           baseColor: [
-            0.0079209999999999992,
-            0.004653,
-            0.80000000000000004,
+            1,
+            1,
+            0,
             1,
           ],
         },
@@ -120,13 +196,13 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Lichter hinten',
+      name: 'Material.001',
       parameters: [
         {
           baseColor: [
-            0.80000000000000004,
-            0.017944000000000002,
-            0.011299,
+            0,
+            0,
+            0,
             1,
           ],
         },
@@ -158,13 +234,13 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Lichter vorne',
+      name: 'aussen metallrahmen',
       parameters: [
         {
           baseColor: [
-            0.80000000000000004,
-            0.67154800000000003,
-            0.061691999999999997,
+            0.027210000000000002,
+            0.027210000000000002,
+            0.027210000000000002,
             1,
           ],
         },
@@ -196,51 +272,13 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Kennzeichen',
+      name: 'holz',
       parameters: [
         {
           baseColor: [
-            0.80000000000000004,
-            0.80000000000000004,
-            0.80000000000000004,
-            1,
-          ],
-        },
-        {
-          baseColorMap: null,
-        },
-        {
-          normalMap: null,
-        },
-        {
-          interpolatedColor: null,
-        },
-        {
-          metallic: 0,
-        },
-        {
-          metallicMap: null,
-        },
-        {
-          roughness: 1,
-        },
-        {
-          roughnessMap: null,
-        },
-        {
-          opacity: null,
-        },
-      ],
-      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
-    },
-    {
-      name: 'vorne fett',
-      parameters: [
-        {
-          baseColor: [
-            0.0019469999999999999,
-            0.0025790000000000001,
-            0.0023440000000000002,
+            0.152312,
+            0.041973000000000003,
+            0.0072680000000000002,
             1,
           ],
         },
@@ -281,10 +319,10 @@
       'BoneWeights',
     ],
     collision: {},
-    file: 'src/sampledata/autokarosse.fbx',
-    name: 'autokarosse',
+    file: 'src/sampledata/Duck.fbx',
+    name: 'Duck',
     recenter: 'root',
-    scale: 0.06571399999999998,
+    scale: 0.326457,
   },
   version: '0.54:2',
 }

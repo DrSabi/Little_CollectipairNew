@@ -1,17 +1,169 @@
 {
   animations: [
     {
-      path: 'src/sampledata/autokarosse.fbx',
+      path: 'src/sampledata/Ringspiel/Ringspiel.fbx',
     },
   ],
   materials: [
     {
-      name: 'unnamed material',
+      name: 'holz',
+      parameters: [
+        {
+          baseColor: [
+            0.54885300000000004,
+            0.32264700000000002,
+            0.051708999999999998,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'top',
+      parameters: [
+        {
+          baseColor: [
+            0.033959000000000003,
+            0.70374899999999996,
+            0.27605499999999999,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Material.001',
       parameters: [
         {
           baseColor: [
             1,
+            0,
+            0,
             1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Material.002',
+      parameters: [
+        {
+          baseColor: [
+            0,
+            1,
+            0,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Material.003',
+      parameters: [
+        {
+          baseColor: [
+            0,
+            0,
             1,
             1,
           ],
@@ -44,13 +196,13 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Fensterscheibe',
+      name: 'Material.004',
       parameters: [
         {
           baseColor: [
-            0.80000000000000004,
-            0.80000000000000004,
-            0.80000000000000004,
+            1,
+            1,
+            0,
             1,
           ],
         },
@@ -82,13 +234,13 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Auto',
+      name: 'Material.005',
       parameters: [
         {
           baseColor: [
-            0.0079209999999999992,
-            0.004653,
-            0.80000000000000004,
+            1,
+            0,
+            1,
             1,
           ],
         },
@@ -120,127 +272,13 @@
       source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
     },
     {
-      name: 'Lichter hinten',
+      name: 'Material.006',
       parameters: [
         {
           baseColor: [
-            0.80000000000000004,
-            0.017944000000000002,
-            0.011299,
+            0,
             1,
-          ],
-        },
-        {
-          baseColorMap: null,
-        },
-        {
-          normalMap: null,
-        },
-        {
-          interpolatedColor: null,
-        },
-        {
-          metallic: 0,
-        },
-        {
-          metallicMap: null,
-        },
-        {
-          roughness: 1,
-        },
-        {
-          roughnessMap: null,
-        },
-        {
-          opacity: null,
-        },
-      ],
-      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
-    },
-    {
-      name: 'Lichter vorne',
-      parameters: [
-        {
-          baseColor: [
-            0.80000000000000004,
-            0.67154800000000003,
-            0.061691999999999997,
             1,
-          ],
-        },
-        {
-          baseColorMap: null,
-        },
-        {
-          normalMap: null,
-        },
-        {
-          interpolatedColor: null,
-        },
-        {
-          metallic: 0,
-        },
-        {
-          metallicMap: null,
-        },
-        {
-          roughness: 1,
-        },
-        {
-          roughnessMap: null,
-        },
-        {
-          opacity: null,
-        },
-      ],
-      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
-    },
-    {
-      name: 'Kennzeichen',
-      parameters: [
-        {
-          baseColor: [
-            0.80000000000000004,
-            0.80000000000000004,
-            0.80000000000000004,
-            1,
-          ],
-        },
-        {
-          baseColorMap: null,
-        },
-        {
-          normalMap: null,
-        },
-        {
-          interpolatedColor: null,
-        },
-        {
-          metallic: 0,
-        },
-        {
-          metallicMap: null,
-        },
-        {
-          roughness: 1,
-        },
-        {
-          roughnessMap: null,
-        },
-        {
-          opacity: null,
-        },
-      ],
-      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
-    },
-    {
-      name: 'vorne fett',
-      parameters: [
-        {
-          baseColor: [
-            0.0019469999999999999,
-            0.0025790000000000001,
-            0.0023440000000000002,
             1,
           ],
         },
@@ -281,10 +319,10 @@
       'BoneWeights',
     ],
     collision: {},
-    file: 'src/sampledata/autokarosse.fbx',
-    name: 'autokarosse',
+    file: 'src/sampledata/Ringspiel/Ringspiel.fbx',
+    name: 'Ringspiel',
     recenter: 'root',
-    scale: 0.06571399999999998,
+    scale: 0.33333299999999999,
   },
   version: '0.54:2',
 }

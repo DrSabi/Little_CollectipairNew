@@ -14,8 +14,8 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="50pt"
-        android:layout_marginTop="40pt"
+        android:layout_marginStart="115sp"
+        android:layout_marginTop="50sp"
         app:srcCompat="@drawable/level1" />
 
     <ImageButton

@@ -14,6 +14,7 @@ import android.view.Display;
 import android.view.GestureDetector;
 import android.view.Gravity;
 import android.view.MotionEvent;
+import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
 import java.util.Random;
@@ -159,7 +160,7 @@ public class MainActivity extends AppCompatActivity {
         int i = r.nextInt(rnd_count);
 
         //Temp. stern.sfb dont exist atm
-        i = 0;
+        i = 2;
 
         ModelRenderable.builder()
                 .setSource(this, Uri.parse(sfbfiles[i]))
@@ -172,12 +173,19 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
                 });
     }
 
     private void RenderableModel_LVL2(Anchor anchor)
     {
-        String[] sfbfiles = {"1", "2", "3", "4", "5"};
+        String[] sfbfiles = {"teddy_armleft.sfb", "teddy_armright.sfb",
+                "teddy_legleft.sfb", "teddy_legright.sfb", "teddy_body.sfb", "teddy_head.sfb"};
 
 
         ModelRenderable.builder()
@@ -191,6 +199,16 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
+
+
+
+
                 });
     }
 
@@ -208,6 +226,13 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
+
                 });
     }
 
@@ -225,6 +250,25 @@ public class MainActivity extends AppCompatActivity {
 
 
                     arFragment.getArSceneView().getScene().addChild(anchorNode);
+
+                    Button einsammeln = findViewById(R.id.einsammeln);
+                    einsammeln.setOnClickListener(v -> {
+
+                        deleteObject(anchorNode);
+                    });
+
                 });
+    }
+
+    private void deleteObject(AnchorNode anchorNode) {
+
+        anchorNode.setParent(null);
+        isModelPlaced = false;
+        try{
+            wait(3000);
+        }
+        catch(Exception e) {}
+        
+
     }
 }
