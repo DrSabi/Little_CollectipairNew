@@ -290,7 +290,7 @@ public class MainActivity extends AppCompatActivity {
         if (item_count <= items_sum) {
            // new Thread(() -> {
                 //runOnUiThread(() ->
-                        Ausgabe.setText("Eingesammelte Items " + item_count + "von " + items_sum);
+                        Ausgabe.setText(item_count + "/" + items_sum);
            // }).start();
        }
     }
