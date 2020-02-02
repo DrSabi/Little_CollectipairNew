@@ -77,6 +77,8 @@ public class Level_Select extends AppCompatActivity {
     }
 
     private void backButtonClicked() {
+        Intent intent = new Intent(this, MenuActivity.class);
+        startActivity(intent);
     }
 
 }

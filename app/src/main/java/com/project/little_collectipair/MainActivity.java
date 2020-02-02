@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.Activity;
 import android.app.ActivityManager;
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.ColorSpace;
 import android.net.Uri;
 import android.os.Build;
@@ -106,6 +107,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
     }
+
     private void startTimer() {
 
         TextView timer = findViewById(R.id.Fehler);
@@ -156,19 +158,17 @@ public class MainActivity extends AppCompatActivity {
 
     private void RenderableModel_LVL1(Anchor anchor)
     {
-        int rnd_count;
-        String[] sfbfiles = {"reifen.sfb", "stern.sfb", "autokarosse.sfb"};
+        int count = 0;
+        String[] sfbfiles = {"reifen.sfb", "stern.sfb", "autokarosse.sfb", "autogesamt.sfb"};
 
-        rnd_count = (karosse == false ? 1 : 0) + (reifen_count < 4 ? 1 : 0) + (star_count < 2 ? 1 : 0);
+        if(item_count < 4)  { count = 0; }
+        if(item_count <6 && item_count >= 4) { count = 1; }
+        if(item_count == 6 ) { count = 2; }
+        if(item_count == 7 ) { count = 3; }
 
-        Random r = new Random();
-        int i = r.nextInt(rnd_count);
-
-        //Temp. stern.sfb dont exist atm
-        i = 2;
 
         ModelRenderable.builder()
-                .setSource(this, Uri.parse(sfbfiles[i]))
+                .setSource(this, Uri.parse(sfbfiles[count]))
                 .build()
                 .thenAccept(tireRenderable -> {
                     AnchorNode anchorNode = new AnchorNode(anchor);
@@ -185,12 +185,13 @@ public class MainActivity extends AppCompatActivity {
                         deleteObject(anchorNode);
                     });
                 });
+        item_count++;
     }
 
     private void RenderableModel_LVL2(Anchor anchor)
     {
         String[] sfbfiles = {"teddy_armleft.sfb", "teddy_armright.sfb",
-                "teddy_legleft.sfb", "teddy_legright.sfb", "teddy_body.sfb", "teddy_head.sfb"};
+                "teddy_legleft.sfb", "teddy_legright.sfb", "teddy_body.sfb", "teddy_head.sfb", "teddy.sfb"};
 
 
         ModelRenderable.builder()
@@ -219,7 +220,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void RenderableModel_LVL3(Anchor anchor)
     {
-        String[] sfbfiles = {"1", "2", "3", "4", "5", "7"};
+        String[] sfbfiles = {"ringspiel_base.sfb", "ringspiel_ring0.sfb",
+                "ringspiel_ring1.sfb", "ringspiel_ring2.sfb",
+                "ringspiel_ring3.sfb", "ringspiel_ring4.sfb",
+                "ringspiel_ring5.sfb", "ringspiel.sfb"};
+
         ModelRenderable.builder()
                 .setSource(this, Uri.parse(sfbfiles[item_count++]))
                 .build()
@@ -243,9 +248,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void RenderableModel_LVL99(Anchor anchor)
     {
-        String[] sfbfiles = {"1"};
         ModelRenderable.builder()
-                .setSource(this, Uri.parse("reifen.sfb"))
+                .setSource(this, Uri.parse("duck.sfb"))
                 .build()
                 .thenAccept(tireRenderable -> {
                     AnchorNode anchorNode = new AnchorNode(anchor);
@@ -275,6 +279,10 @@ public class MainActivity extends AppCompatActivity {
         catch(Exception e) {}
         deletcounter();
 
+        if(item_count > items_sum){
+            Intent intent = new Intent(this, Level_Select.class);
+            startActivity(intent);
+        }
     }
 
     private void deletcounter() {
