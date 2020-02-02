@@ -159,7 +159,7 @@ public class MainActivity extends AppCompatActivity {
     private void RenderableModel_LVL1(Anchor anchor)
     {
         int count = 0;
-        String[] sfbfiles = {"reifen.sfb", "stern.sfb", "autokarosse.sfb", "autogesamt.sfb"};
+        String[] sfbfiles = {"reifen.sfb", "mercedesstern.sfb", "autokarosse.sfb", "autogesamt.sfb"};
 
         if(item_count < 4)  { count = 0; }
         if(item_count <6 && item_count >= 4) { count = 1; }
@@ -193,29 +193,30 @@ public class MainActivity extends AppCompatActivity {
         String[] sfbfiles = {"teddy_armleft.sfb", "teddy_armright.sfb",
                 "teddy_legleft.sfb", "teddy_legright.sfb", "teddy_body.sfb", "teddy_head.sfb", "teddy.sfb"};
 
+        if(item_count < 7) {
 
-        ModelRenderable.builder()
-                .setSource(this, Uri.parse(sfbfiles[item_count++]))
-                .build()
-                .thenAccept(tireRenderable -> {;
-                    AnchorNode anchorNode = new AnchorNode(anchor);
-                    SkeletonNode skeletonNode = new SkeletonNode();
-                    skeletonNode.setParent(anchorNode);
-                    skeletonNode.setRenderable(tireRenderable);
+            ModelRenderable.builder()
+                    .setSource(this, Uri.parse(sfbfiles[item_count++]))
+                    .build()
+                    .thenAccept(tireRenderable -> {
+                        ;
+                        AnchorNode anchorNode = new AnchorNode(anchor);
+                        SkeletonNode skeletonNode = new SkeletonNode();
+                        skeletonNode.setParent(anchorNode);
+                        skeletonNode.setRenderable(tireRenderable);
 
 
-                    arFragment.getArSceneView().getScene().addChild(anchorNode);
+                        arFragment.getArSceneView().getScene().addChild(anchorNode);
 
-                    Button einsammeln = findViewById(R.id.einsammeln);
-                    einsammeln.setOnClickListener(v -> {
+                        Button einsammeln = findViewById(R.id.einsammeln);
+                        einsammeln.setOnClickListener(v -> {
 
-                        deleteObject(anchorNode);
+                            deleteObject(anchorNode);
+                        });
+
+
                     });
-
-
-
-
-                });
+        }
     }
 
     private void RenderableModel_LVL3(Anchor anchor)
@@ -225,25 +226,27 @@ public class MainActivity extends AppCompatActivity {
                 "ringspiel_ring3.sfb", "ringspiel_ring4.sfb",
                 "ringspiel_ring5.sfb", "ringspiel.sfb"};
 
-        ModelRenderable.builder()
-                .setSource(this, Uri.parse(sfbfiles[item_count++]))
-                .build()
-                .thenAccept(tireRenderable -> {
-                    AnchorNode anchorNode = new AnchorNode(anchor);
-                    SkeletonNode skeletonNode = new SkeletonNode();
-                    skeletonNode.setParent(anchorNode);
-                    skeletonNode.setRenderable(tireRenderable);
+        if(item_count < 8) {
+            ModelRenderable.builder()
+                    .setSource(this, Uri.parse(sfbfiles[item_count++]))
+                    .build()
+                    .thenAccept(tireRenderable -> {
+                        AnchorNode anchorNode = new AnchorNode(anchor);
+                        SkeletonNode skeletonNode = new SkeletonNode();
+                        skeletonNode.setParent(anchorNode);
+                        skeletonNode.setRenderable(tireRenderable);
 
 
-                    arFragment.getArSceneView().getScene().addChild(anchorNode);
+                        arFragment.getArSceneView().getScene().addChild(anchorNode);
 
-                    Button einsammeln = findViewById(R.id.einsammeln);
-                    einsammeln.setOnClickListener(v -> {
+                        Button einsammeln = findViewById(R.id.einsammeln);
+                        einsammeln.setOnClickListener(v -> {
 
-                        deleteObject(anchorNode);
+                            deleteObject(anchorNode);
+                        });
+
                     });
-
-                });
+        }
     }
 
     private void RenderableModel_LVL99(Anchor anchor)
@@ -273,11 +276,11 @@ public class MainActivity extends AppCompatActivity {
 
         anchorNode.setParent(null);
         isModelPlaced = false;
+        deletcounter();
         try{
             wait(3000);
         }
         catch(Exception e) {}
-        deletcounter();
 
         if(item_count > items_sum){
             Intent intent = new Intent(this, Level_Select.class);
@@ -287,8 +290,11 @@ public class MainActivity extends AppCompatActivity {
 
     private void deletcounter() {
         TextView Ausgabe = findViewById(R.id.itemsCntTxt);
-        new Thread(() -> {
-            runOnUiThread(() -> Ausgabe.setText("Eingesammelte Items "+item_count + "von "+items_sum));
-        }).start();
+        if (item_count <= items_sum) {
+           // new Thread(() -> {
+                //runOnUiThread(() ->
+                        Ausgabe.setText(item_count + "/" + items_sum);
+           // }).start();
+       }
     }
 }

@@ -45,7 +45,9 @@ public class MenuActivity extends AppCompatActivity {
     }
 
     private void closeButtonClicked() {
-        finish();
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.putExtra("LVL_ID", 99);
+        startActivity(intent);
     }
 
 }
