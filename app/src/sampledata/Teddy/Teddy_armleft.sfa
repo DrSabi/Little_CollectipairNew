@@ -1,0 +1,100 @@
+{
+  animations: [
+    {
+      path: 'src/sampledata/Teddy/Teddy_armleft.fbx',
+    },
+  ],
+  materials: [
+    {
+      name: 'paw.001',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            0.81428599999999995,
+            0.385714,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+    {
+      name: 'Body.003',
+      parameters: [
+        {
+          baseColor: [
+            1,
+            0.21244499999999999,
+            0,
+            1,
+          ],
+        },
+        {
+          baseColorMap: null,
+        },
+        {
+          normalMap: null,
+        },
+        {
+          interpolatedColor: null,
+        },
+        {
+          metallic: 0,
+        },
+        {
+          metallicMap: null,
+        },
+        {
+          roughness: 1,
+        },
+        {
+          roughnessMap: null,
+        },
+        {
+          opacity: null,
+        },
+      ],
+      source: 'build/sceneform_sdk/default_materials/fbx_material.sfm',
+    },
+  ],
+  model: {
+    attributes: [
+      'Position',
+      'TexCoord',
+      'Orientation',
+      'BoneIndices',
+      'BoneWeights',
+    ],
+    collision: {},
+    file: 'src/sampledata/Teddy/Teddy_armleft.fbx',
+    name: 'Teddy_armleft',
+    recenter: 'root',
+    scale: 0.75381699999999996,
+  },
+  version: '0.54:2',
+}
